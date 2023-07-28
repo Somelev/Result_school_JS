@@ -85,8 +85,8 @@ let a = 6;
 console.log(a > b);
 */
 
-
-/*console.log(a);
+/* calculate
+console.log(a);
 console.log(b);
 console.log(c);
 
