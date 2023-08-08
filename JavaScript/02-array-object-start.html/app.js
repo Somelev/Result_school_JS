@@ -135,6 +135,7 @@ console.log(obj2);
  */
 
 /*notes
+ */
 const inputElement = document.getElementById('title');
 const createBtn = document.getElementById('create');
 const listElement = document.getElementById('list');
@@ -162,8 +163,7 @@ function render() {
 	for (let i = 0; i < notes.length; i++) {
 		listElement.insertAdjacentHTML(
 			'beforeend',
-			getNoteTemplate(notes[i]),
-			i
+			getNoteTemplate(notes[i], i)
 		);
 	}
 	// for (let note of notes)
@@ -216,4 +216,3 @@ function getNoteTemplate(note, index) {
 	</span>
 	</li>`;
 }
-*/
