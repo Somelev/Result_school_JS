@@ -63,7 +63,7 @@ const names = ['Владимир', 'Елена', 'Игорь', 'Ксения'];
 
 const people = [
 	{ name: 'Владилен', budget: 470 },
-	{ name: 'Елена', budget: 1470 },
+	{ name: 'Елена', budget: 5470 },
 	{ name: 'Игорь', budget: 70 },
 	{ name: 'Ксения', budget: 12070 },
 ];
@@ -87,8 +87,38 @@ console.log(people);
 
 // const finded = people.find((p) => p.budget === 12070);
 
-const finded = people.findIndex(function (person) {
-	return person.budget === 12070;
-});
+// const finded = people.findIndex(function (person) {
+// 	return person.budget === 12070;
+// });
 
-console.log(finded);
+// console.log(finded);
+// console.log(people.with(finded, 42)); // замена значения на 42
+
+// const filtered = people.filter(function (f) {
+// 	return f.budget > 5000;
+// });
+// console.log(filtered); // фильтр по бюджету выводит в новый массив объектов
+
+// let sumBudget = 0; // сложение бюджетов больше 5000 в новом массиве
+// const filtered = people.filter(function (f) {
+// 	return f.budget > 5000;
+// });
+// console.log(filtered);
+// filtered.forEach(function (b) {
+// 	//sumBudget += b.budget;
+// 	sumBudget = sumBudget + b.budget;
+// });
+// console.log(sumBudget);
+
+// сложение бюджетов больше 5000 в новом массиве и в коротком синтаксисе
+// const sumBudget = people
+// 	.filter((p) => p.budget > 5000)
+// 	.map((p) => p.budget)
+// 	.reduce((acc, p) => acc + p, 0);
+
+// console.log(sumBudget);
+
+const string = 'Привет, как дела?'
+const reversed = string.split('').toReversed().join('') // split -разделение строки на массив по опредюсимволу, toReversed - переворот строки, join - объединение в строку
+
+console.log(reversed)
