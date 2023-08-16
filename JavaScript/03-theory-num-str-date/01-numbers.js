@@ -37,3 +37,12 @@
 // console.log(parseFloat(fixed)); // 0.3
 
 // BigInt
+// console.log(BigInt(Number.MAX_SAFE_INTEGER) + 97224980n)
+
+//Math
+// function getRandomNumber(min, max) {
+// 	return Math.floor(Math.random() * (max - min + 1) + min);
+// }
+// const num = getRandomNumber(5, 50);
+// console.log(num);
+// console.log(Math.random());

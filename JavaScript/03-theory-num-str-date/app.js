@@ -1,3 +1,5 @@
+//base js part 1
+
 /*task 1
  
 function isPrimeNumber(num) {
@@ -47,4 +49,47 @@ console.log(isPerfectNumber(16)); // false
  */
 
 /*task 4
- */
+ 
+function getNumberDigit(number, digitPosition) {
+	let count = -1;
+	let num = number;
+	while (num !== 0) {
+		count++;
+		num = parseInt(num / 10);
+	}
+	// console.log(count);
+	if (digitPosition > count) return console.log('undefined');
+	const a = Math.floor(number / 100);
+	const c = number % 10;
+	const b = parseInt(number / 10 - 10 * a);
+	const arr = [];
+	if (digitPosition <= count) arr.push(a, b, c);
+	console.log(arr);
+	console.log(arr[digitPosition]);
+}
+
+getNumberDigit(123, 0); // 1
+getNumberDigit(123, 1); // 2
+getNumberDigit(123, 2); // 3
+getNumberDigit(1, 2); // undefined
+*/
+
+
+//base js part 2
+
+/*task 1
+*/
+
+ 
+/*task 2
+*/
+ 
+/*task 3
+*/
+ 
+/*task 4
+*/
+ 
+/*task 5
+*/
+ 
