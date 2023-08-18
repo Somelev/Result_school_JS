@@ -35,20 +35,24 @@ const fullBtn = document.getElementById('full');
 const dateBtn = document.getElementById('date');
 const timeBtn = document.getElementById('time');
 
-timeBtn.onclick = function () {
-	mode = 'time';
-	update();
-};
+//пример функции с замыканием
+function bindMode(name) {
+	return function () {
+		mode = name;
+		update();
+	};
+}
 
-dateBtn.onclick = function () {
-	mode = 'date';
-	update();
-};
+//пример функции буз замыкания
+// timeBtn.onclick = function () {
+// 	mode = 'time';
+// 	update();
+// };
+timeBtn.onclick = bindMode('time');
 
-fullBtn.onclick = function () {
-	mode = 'full';
-	update();
-};
+dateBtn.onclick = bindMode('date');
+
+fullBtn.onclick = bindMode('full');
 
 setInterval(update, 1000);
 update();
