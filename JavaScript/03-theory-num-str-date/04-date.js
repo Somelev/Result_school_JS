@@ -27,7 +27,7 @@ console.log(now.toLocaleTimeString()); // 23:13:49
 */
 
 // ======= AppTime
-
+/*App Time
 let mode = 'time';
 const now = new Date();
 const output = document.getElementById('output');
@@ -75,3 +75,4 @@ function format(formatMode) {
 			return now.toLocaleTimeString();
 	}
 }
+*/

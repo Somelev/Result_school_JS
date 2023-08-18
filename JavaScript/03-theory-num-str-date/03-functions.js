@@ -1,11 +1,12 @@
 // Function Declaration (можно вначале вызвать функцию, а потом объявить)
+
 // greet('Vladimir');
 
 // function greet(name) {
 // 	console.log('Hello -', name);
 // }
 
-// //Functiom Expression (нельзя объявить до объявления)
+// //Functiom Expression (нельзя запустить до объявления)
 // const greet2 = function (name) {
 // 	console.log('Hello -', name);
 // };

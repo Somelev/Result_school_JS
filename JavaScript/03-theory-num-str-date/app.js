@@ -74,22 +74,118 @@ getNumberDigit(123, 2); // 3
 getNumberDigit(1, 2); // undefined
 */
 
-
 //base js part 2
 
 /*task 1
+ 
+const car = {
+	name: 'Hendai Solaris',
+	type: 'sedan',
+	maxSpeed: '320',
+	color: 'red',
+};
+
+function resultHTML(car) {
+	const result = `article>
+	<div>
+		<h2>${car.name}</h2>
+		<span>${car.type}</span>
+	</div>
+	<div>
+		<span>Maximum speed:</span>
+		<span>${car.maxSpeed}</span>
+	</div>
+	<div>
+		<span>Color:</span>
+		<span>${car.color}</span>
+	</div>
+	</article>
+	`;
+	return result;
+}
+console.log(resultHTML(car))
 */
 
- 
 /*task 2
-*/
  
+// const countWords = (sentence) => {
+// 	const result = sentence.split(' ').length;
+// 	return result;
+// };
+const countWords = (sentence) => sentence.split(' ').length
+const sentence = 'Hello, how are you?';
+console.log(countWords(sentence)); // 4
+*/
+
 /*task 3
-*/
  
+// const getInitials = (fullName) => {
+// 	const arr = fullName.trim().split('')
+// 	const firstChar = arr[0];
+// 	let secondChar = ' ';
+// 	// console.log(arr);
+// 	// for (let i = 1; i < arr.length; i++) {
+// 	// 	if (arr[i] === arr[i].toUpperCase()) {
+// 	// 		secondChar = arr[i];
+// 	// 	}
+// 	// }
+// 	return `${firstChar}. ${secondChar}.`;
+// };
+
+const getInitials = (fullName) => `${fullName[0]}. ${fullName.split(' ').splice(1).join()[0]}.`
+
+const fullName = 'John Doe';
+const initials = getInitials(fullName);
+console.log(initials); // "J. D."
+*/
+
 /*task 4
-*/
  
+const generateGoogleString = (num) =>
+	`G${num >= 2 ? 'o'.repeat(num) : 'oo'}gle`;
+
+console.log(generateGoogleString(4));
+// Goooogle
+
+console.log(generateGoogleString(0));
+// Google
+
+console.log(generateGoogleString(-2));
+*/
+
 /*task 5
-*/
  
+function countVowels(str) {
+	const vowels = 'aeiouyаеиоуэюя';
+	let res = 0;
+	for (let i = 0; i < str.length; i++) {
+		if (vowels.indexOf(str[i]) !== -1) {
+			res++;
+		}
+	}
+	return res;
+}
+
+const str = 'Hello, Привет!';
+console.log(countVowels(str)); // 4
+*/
+
+//base js part 3
+
+/*task 1
+ */
+
+/*task 2
+ */
+
+/*task 3
+ */
+
+/*task 4
+ */
+
+/*task 5
+ */
+
+/*task 6
+ */
