@@ -119,6 +119,6 @@ console.log(people);
 // console.log(sumBudget);
 
 const string = 'Привет, как дела?'
-const reversed = string.split('').toReversed().join('') // split -разделение строки на массив по опредюсимволу, toReversed - переворот строки, join - объединение в строку
+const reversed = string.split('').toReversed().join('') // split -разделение строки на массив по опред.символу, toReversed - переворот строки, join - объединение в строку
 
 console.log(reversed)

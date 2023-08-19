@@ -173,19 +173,141 @@ console.log(countVowels(str)); // 4
 //base js part 3
 
 /*task 1
- */
+ 
+function sumNumbers() {
+	const arr = Array.from(arguments);
+	let sum = 0;
+	for (let i = 0; i < arr.length; i++) {
+		sum += arr[i];
+	}
+	return sum;
+}
+
+const result1 = sumNumbers(1, 2, 3, 4, 5);
+console.log(result1); // 15
+
+const result2 = sumNumbers(10, 20, 30);
+console.log(result2); // 60
+*/
 
 /*task 2
- */
+ 
+// function findMaxValue(arr) {
+// 	// let max = 0;
+// 	// if (arr.length === 0) max = undefined;
+// 	// else {
+// 	// 	for (let i = 0; i < arr.length; i++) {
+// 	// 		if (arr[i] > max) max = arr[i];
+// 	// 	}
+// 	// }
+// 	// return max;
+// }
+// const findMaxValue = (arr) => arr.length !== 0 ? Math.max.apply(null, arr) : undefined;
+
+// const numbers1 = [1, 2, 3, 4, 5];
+// const max1 = findMaxValue(numbers1);
+// console.log(max1); // 5
+
+// const numbers2 = [10, 20, 5, 30, 15];
+// const max2 = findMaxValue(numbers2);
+// console.log(max2); // 30
+
+// const emptyArray = [];
+// const maxEmpty = findMaxValue(emptyArray);
+// console.log(maxEmpty); // undefined
+*/
 
 /*task 3
- */
+ 
+
+function calculateAverage(arr) {
+	let sum = 0;
+	if(arr.length === 0) {
+		return 0;
+	} else { 
+		for (let i = 0; i < arr.length; i++) {
+			sum += arr[i];
+		}
+	}
+	return sum / arr.length;
+}
+
+// const calculateAverage = (arr) =>  arr.length !== 0 ? arr.reduce((acc, cur) => acc + cur, 0) / arr.length : 0
+
+const numbers1 = [1, 2, 3, 4, 5];
+console.log(calculateAverage(numbers1)); // 3
+
+const numbers2 = [10, 20, 30, 40, 50];
+console.log(calculateAverage(numbers2)); // 30
+
+const emptyArray = [];
+console.log(calculateAverage(emptyArray)); // 0
+*/
 
 /*task 4
- */
+ 
+function isPalindrome(word) {
+	return word === word.split('').toReversed().join('')
+}
+
+console.log(isPalindrome('level')); // true
+console.log(isPalindrome('radar')); // true
+console.log(isPalindrome('hello')); // false
+*/
 
 /*task 5
+
+// function removeDuplicates(arr) {
+// 	const newArr = [];
+// 	if(arr.length === 0) return newArr;
+// 	else {
+// 		for (let i = 0; i < arr.length; i++) {
+// 			if (arr[i] !== arr[i + 1]) {
+// 				newArr.push(arr[i]);
+// 			}
+// 		}
+// 	}
+// 	return newArr;
+// }
+
+// const removeDuplicates = (arr) => Array.from( new Set(arr))
+const removeDuplicates = (arr) => [...new Set(arr)];
+
+const numbers1 = [1, 2, 3, 3, 4, 5, 5];
+console.log(removeDuplicates(numbers1)); // [1, 2, 3, 4, 5]
+
+const numbers2 = [10, 20, 30, 30, 40, 40, 50];
+console.log(removeDuplicates(numbers2)); // [10, 20, 30, 40, 50]
+
+const emptyArray = [];
+console.log(removeDuplicates(emptyArray)); // []
  */
 
 /*task 6
+
+function createCounter(value) {
+	let counter = value;
+
+	function inc() {
+		counter++;
+	}
+
+	function dec() {
+		counter--;
+	}
+
+	function get() {
+		return counter;
+	}
+
+	return { inc, dec, get };
+}
+
+const { inc, dec, get } = createCounter(5);
+console.log(get()); // 5
+inc();
+inc();
+inc();
+dec();
+console.log(get()); // 7
  */
