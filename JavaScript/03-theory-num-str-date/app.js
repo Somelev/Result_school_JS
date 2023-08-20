@@ -311,3 +311,113 @@ inc();
 dec();
 console.log(get()); // 7
  */
+
+//base js part 4
+
+/*task 1
+ 
+// function calculateAge(birthDate) {
+// 	const birthYear = birthDate.toLocaleDateString().split('.');
+// 	const now = new Date();
+// 	const nowYear = now.toLocaleDateString().split('.');
+// 	let age = nowYear[2] - birthYear[2];
+// 	const month = nowYear[1] - birthYear[1];
+// 	console.log(birthYear, nowYear, month);
+// 	if (month < 0) age--;
+
+// 	return age;
+// }
+
+const calculateAge = (birthDate) => {
+	const nowDate = new Date();
+	const month = nowDate.getMonth() - birthDate.getMonth();
+	let age = nowDate.getFullYear() - birthDate.getFullYear();
+	return month > 0 ? age : age - 1;
+};
+
+const birthDate = new Date('1990-05-20');
+const age = calculateAge(birthDate);
+
+console.log(age);
+*/
+
+/*task 2
+ 
+// function getDateDifference(date1, date2) {
+// 	const dateParse = (date) => Date.parse(date);
+// 	const millToDays = 1000 * 60 * 60 * 24;
+// 	const difference = (dateParse(date2) - dateParse(date1)) / millToDays;
+// 	return difference;
+// }
+
+const getDateDifference = (date1, date2) =>
+	(Date.parse(date2) - Date.parse(date1)) / (1000 * 60 * 60 * 24);
+
+const date1 = new Date('2027-06-01');
+const date2 = new Date('2027-06-10');
+
+const difference = getDateDifference(date1, date2);
+console.log(date1, date2);
+console.log(difference); // 9
+*/
+
+/*task 3
+ 
+function getTimeUntilDate(date) {
+	const now = new Date();
+	const difference = date.getTime() - now.getTime();
+
+	const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+	const hours = Math.floor(
+		(difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+	);
+	const minuts = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+	const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+	return { days, hours, minuts, seconds };
+}
+
+const targetDate = new Date('2027-12-31T23:59:59');
+const timeUntilTargetDate = getTimeUntilDate(targetDate);
+console.log(timeUntilTargetDate);
+// { days: 100, hours: 20, minutes: 45, seconds: 31 }
+*/
+
+/*task 4
+ 
+const isWeekends = (date) =>
+	date.getDay() === 0 || date.getDay() === 6 ? true : false;
+
+const date1 = new Date('2027-07-10'); // Суббота
+const date2 = new Date('2027-07-12'); // Понедельник
+
+console.log(isWeekends(date1)); // true
+console.log(isWeekends(date2)); // false
+*/
+
+/*task 5
+ 
+const isLeapYear=(year)=> year % 4 === 0 ? true : false
+
+console.log(isLeapYear(2023)); // true
+console.log(isLeapYear(2024)); // true
+*/
+
+/*task 6
+ 
+// function getLastDayOfMonth(year, month) {
+// 	const date = new Date(year, month + 1, 0).getDate();
+// 	return date;
+// }
+
+const getLastDayOfMonth = (year, month) => new Date(year, month, 0).getDate();
+
+// июнь 2027
+console.log(getLastDayOfMonth(2027, 6)); // 30
+
+// февраль 2027
+console.log(getLastDayOfMonth(2027, 2)); // 28
+
+// январь 2027
+console.log(getLastDayOfMonth(2027, 0)); // 31
+*/
