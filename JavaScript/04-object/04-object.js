@@ -3,11 +3,11 @@ const person = {
 	age: 28,
 	isYoutuber: true,
 	languages: ['ru', 'en'],
-	adress: {
+	address: {
 		city: 'Moscow',
 		street: 'Moscowskuy prospect',
 	},
-	'compkex key': 'complex value',
+	'complex key': 'complex value',
 	['key_' + 21 * 2]: 'computed value',
 	greet() {
 		console.log('Greet from person');
@@ -23,7 +23,56 @@ const person = {
 	},
 };
 
-console.log(person);
-person.greet();
-person.arrow();
-person.info();
+// console.log(person);
+// person.greet();
+// person.arrow();
+// person.info();
+
+// как обращаться к ключам:
+
+/* console.log(person.adress);
+const addressKey = 'address'; //динамический ключ
+console.log(person[addressKey]);
+console.log('complex key');
+*/
+
+/* внесение изменений в объекты
+person.age++;
+console.log(person.age);
+
+
+person.languages.push('de'); // в конец
+console.log(person.languages); // ['ru', 'en', 'de']
+person.languages.pop(); // из конца
+console.log(person.languages); //['ru', 'en']
+person.languages.shift(); // из начала
+console.log(person.languages); // ['en']
+person.languages.unshift('de'); //  в начало
+console.log(person.languages); // ['de', 'en']
+
+person.address.city = 'MO'; // изменили city
+console.log(person.address.city);
+*/
+
+/* Удаление данных
+
+
+person.address = undefined;
+console.log(person.address); // изменили данные внутри адреса undefined
+
+// удаление ключей:
+delete person.address;
+console.log(person); // полностью удалили 
+ */
+
+/* Деструкторизация
+ */
+
+// const age = person.age
+// const name = person.name
+// const languages = person.languages
+// слишком много повторений кода: 'name', person...
+
+const { age, name, languages } = person;
+
+console.log(languages, age, name);
