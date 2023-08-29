@@ -1,4 +1,4 @@
-const person = {
+/*const person = {
 	name: 'Vladimir',
 	age: 28,
 	isYoutuber: true,
@@ -22,6 +22,7 @@ const person = {
 		console.log('Person name', this.name); //this - тот же объект
 	},
 };
+*/
 
 // console.log(person);
 // person.greet();
@@ -73,6 +74,45 @@ console.log(person); // полностью удалили
 // const languages = person.languages
 // слишком много повторений кода: 'name', person...
 
-const { age, name, languages } = person;
-
+/*
+const { age, name: fi, languages } = person;
 console.log(languages, age, name);
+*/
+
+/* Classes
+ */
+class Person {
+	constructor(name, age) {
+		this.name = name ?? 'Undefined name';
+		this.age = age;
+	}
+	//создадим методы
+	sayHello() {
+		console.log('Hello from', this.name);
+	}
+}
+
+const person1 = new Person('Vladimir', 28);
+const person2 = new Person('Anna', 26);
+
+// console.log(person1, person2);
+person1.sayHello();
+person2.sayHello();
+
+/* 04-object task 1
+ */
+
+/* 04-object task 2
+ */
+
+/* 04-object task 3
+ */
+
+/* 04-object task 4
+ */
+
+/* 04-object task 5
+ */
+
+/* 04-object task 6
+ */
