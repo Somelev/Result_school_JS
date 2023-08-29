@@ -100,7 +100,19 @@ person1.sayHello();
 person2.sayHello();
 
 /* 04-object task 1
- */
+ 
+class Circle {
+	constructor(radius) {
+		this.radius = radius;
+	}
+	getArea() {
+		return (3.1415926535 * Math.pow(circle.radius, 2)).toFixed(2);
+	}
+}
+
+const circle = new Circle(5);
+console.log(circle.getArea()); // "78.54"
+*/
 
 /* 04-object task 2
  */
