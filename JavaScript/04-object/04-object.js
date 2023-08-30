@@ -80,7 +80,7 @@ console.log(languages, age, name);
 */
 
 /* Classes
- */
+ 
 class Person {
 	constructor(name, age) {
 		this.name = name ?? 'Undefined name';
@@ -98,6 +98,7 @@ const person2 = new Person('Anna', 26);
 // console.log(person1, person2);
 person1.sayHello();
 person2.sayHello();
+*/
 
 /* 04-object task 1
  
@@ -116,6 +117,19 @@ console.log(circle.getArea()); // "78.54"
 
 /* 04-object task 2
  */
+class Product {
+	constructor(name, price) {
+		this.name = name;
+		this.price = price;
+	}
+	priceWithDiscount(number) {
+		return this.price - this.price * (number / 100);
+	}
+}
+
+const product = new Product('Phone', 1000);
+console.log(product.priceWithDiscount(10)); // 900
+console.log(product.priceWithDiscount(20)); // 800
 
 /* 04-object task 3
  */
