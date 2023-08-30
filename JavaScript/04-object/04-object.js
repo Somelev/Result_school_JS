@@ -116,7 +116,7 @@ console.log(circle.getArea()); // "78.54"
 */
 
 /* 04-object task 2
- */
+ 
 class Product {
 	constructor(name, price) {
 		this.name = name;
@@ -130,9 +130,32 @@ class Product {
 const product = new Product('Phone', 1000);
 console.log(product.priceWithDiscount(10)); // 900
 console.log(product.priceWithDiscount(20)); // 800
+*/
 
 /* 04-object task 3
- */
+ 
+class Person {
+	constructor() {
+		this.friends = [];
+	}
+	addFriend(name) {
+		this.friends.push(name);
+	}
+	showFriends() {
+		// console.log(this.friends.toString())
+		console.log(this.friends.splice('').join(', '));
+	}
+}
+
+const person = new Person();
+// console.log(person.friends);
+person.addFriend('Иван');
+person.addFriend('Сергей');
+person.addFriend('Игорь');
+console.log(person.friends);
+person.showFriends(); // Иван, Сергей, Игорь
+*/
+
 
 /* 04-object task 4
  */
