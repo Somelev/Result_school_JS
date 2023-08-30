@@ -215,6 +215,24 @@ foo.bar(); // 5
 foo.baz(); // undefined т.к. обращается к глобальному this
 */
 
-
 /* 04-object task 6
- */
+ 
+const boxFactory = {
+	type: 'box',
+	count: 0,
+	produce: function () {
+		this.count++;
+		// console.log(count);
+		return 'Box № ' + this.count;
+	},
+};
+
+const produceBox = (produceFn) => {
+	const boxName = produceFn();
+	console.log(boxName);
+};
+
+for (let i = 0; i < 25; i++) {
+	produceBox(boxFactory.produce.bind(boxFactory));
+}
+*/
