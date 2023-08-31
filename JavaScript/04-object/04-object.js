@@ -168,7 +168,7 @@ class Animal {
 		console.log(`My name is ${this.name}`);
 	}
 	sayInfo() {
-		console.log(`${this.name}' favorite food is ${this.favoriteFood}`);
+		console.log(`${this.name}'s favorite food is ${this.favoriteFood}`);
 	}
 }
 
